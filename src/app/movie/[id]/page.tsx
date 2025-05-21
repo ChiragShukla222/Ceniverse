@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { StarIcon, HeartIcon } from '@heroicons/react/24/solid'
 import { HeartIcon as HeartOutlineIcon } from '@heroicons/react/24/outline'
-import { getMovieDetails, getBackdropUrl, Movie } from '@/lib/tmdb'
+import { getMovieDetails, getBackdropUrl, getPosterUrl, Movie } from '@/lib/tmdb'
 import { useMovieStore } from '@/store/movie-store'
 
 export default function MoviePage({ params }: { params: { id: string } }) {
@@ -54,7 +54,7 @@ export default function MoviePage({ params }: { params: { id: string } }) {
                 className="relative w-48 h-72 rounded-lg overflow-hidden"
               >
                 <Image
-                  src={getBackdropUrl(movie.poster_path, 'w500')}
+                  src={getPosterUrl(movie.poster_path)}
                   alt={movie.title}
                   fill
                   className="object-cover"
