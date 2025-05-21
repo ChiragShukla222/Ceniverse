@@ -47,6 +47,6 @@ export function getPosterUrl(path: string, size: 'w500' | 'original' = 'w500'): 
   return `${TMDB_IMAGE_BASE_URL}/${size}${path}`
 }
 
-export function getBackdropUrl(path: string, size: 'original' | 'w1280' = 'original'): string {
+export function getBackdropUrl(path: string, size: 'original' | 'w1280' | 'w500' = 'original'): string {
   return `${TMDB_IMAGE_BASE_URL}/${size}${path}`
 } 
