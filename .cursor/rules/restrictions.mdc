@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+title: "Theme Toggle"
+slug: "/components/theme-toggle"
+status: "Stable"
+created: "2025-05-06"
+---
+
+import { ThemeToggle } from '@/components/ui/theme-toggle'
+
+# 🌗 Theme Toggle
+
+A toggle component that switches between Dark and Light themes using Tailwind and `next-themes`. It persists user preferences across sessions and supports animated transitions.
+
+---
+
+## ✅ Overview
+
+The `ThemeToggle` component provides an elegant and accessible way to switch between themes. It’s built with TailwindCSS and integrates with `next-themes`.
+
+---
+
+## ⚙️ Props
+
+| Prop Name    | Type       | Default     | Description                                      |
+|--------------|------------|-------------|--------------------------------------------------|
+| `className`  | `string`   | `''`        | Optional Tailwind classes for outer container    |
+| `size`       | `'sm' \| 'md' \| 'lg'` | `'md'` | Sets size of the toggle                         |
+| `ariaLabel`  | `string`   | `'Toggle theme'` | Accessibility label                           |
+
+---
+
+## 🧪 Features
+
+- Integrates with Tailwind's dark mode
+- Uses `next-themes` for persistent preferences
+- Animated sun/moon icon transition
+- Works seamlessly across routes
+
+---
+
+## 🧩 Example Usage
+
+```tsx
+'use client'
+import { ThemeToggle } from '@/components/ui/theme-toggle'
+
+export default function Header() {
+  return (
+    <header className="flex justify-end px-4 py-2">
+      <ThemeToggle size="md" />
+    </header>
+  )
+}
